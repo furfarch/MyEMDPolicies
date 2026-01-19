@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEMD - Policies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .policy-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .policy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .policy-card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .policy-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .policy-card a {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        .policy-card a:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        
+        .last-updated {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MyEMD Policies</h1>
+            <p>Privacy Policies and General Terms & Conditions</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> <span id="lastUpdated"></span>
+        </div>
+        
+        <div class="policy-grid">
+            <div class="policy-card">
+                <h2>Privacy Policy</h2>
+                <p>Learn how we collect, use, and protect your personal information.</p>
+                <a href="privacy-policy.html">Read Privacy Policy</a>
+            </div>
+            
+            <div class="policy-card">
+                <h2>Terms & Conditions</h2>
+                <p>Review the terms and conditions for using MyEMD services.</p>
+                <a href="terms-and-conditions.html">Read Terms & Conditions</a>
+            </div>
+            
+            <div class="policy-card">
+                <h2>Cookie Policy</h2>
+                <p>Understand how we use cookies and similar technologies.</p>
+                <a href="cookie-policy.html">Read Cookie Policy</a>
+            </div>
+            
+            <div class="policy-card">
+                <h2>Data Protection</h2>
+                <p>Information about how we comply with data protection regulations.</p>
+                <a href="data-protection.html">Read Data Protection</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> MyEMD. All rights reserved.</p>
+            <p>For questions about these policies, please contact us.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Set last updated date
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
